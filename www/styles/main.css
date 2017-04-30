@@ -1,0 +1,58 @@
+﻿.new,
+.menu,add {
+    display: block;
+    width: 17%;
+    padding-bottom: 10%;
+}
+.menu {
+    background: #1D1B1B url("../images/menu.svg") no-repeat 55% 60%;
+    background-size: 50% auto;
+    padding: 10% 0 0 0;
+}
+.add {
+    background: #1D1B1B url("../images/add.svg") no-repeat 50% 50%;
+    background-size: 50% auto;
+    padding: 18% 0 0 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 3423;
+    border-radius: 50%;
+    width: 18%;
+    bottom: 10%;
+    right: 10%
+}
+.exit {
+    background: red url("../images/add.svg") no-repeat 50% 50%;
+    background-size: 50% auto;
+    margin: 5% 10% 0% 0%;
+    border-radius: 50%;
+    width: 5%;
+    display: block;
+    padding:5%;
+}
+.container {
+    padding: 0;
+}
+.photo {
+    height: 200px;
+    width: 200px;
+    margin: 2%;
+    text-align: center;
+    line-height: 200px;
+    background: white;
+}
+.mybtn{
+    width: 80%;
+    text-align: center;
+    margin: 0% 0% 5% 10%;
+}
+.item {
+    list-style: none;
+}
+.link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-top: 4%;
+    padding-left: 10%;
+}

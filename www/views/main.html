@@ -1,0 +1,16 @@
+﻿<div class="row header">
+    <div class="col-xs-12">
+        <span ng-click="" class="new pull-right"></span>
+        <span ng-click="showSideBar()" class="menu pull-left"></span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="container" id="map">
+            <leaflet ng-click="getlt($event)" lf-center="center" tiles="tiles" markers="markers" event-broadcast="events" width="100%" height="600px"></leaflet>
+            <h3></h3>
+            <p></p>
+        </div>
+    </div>
+</div>

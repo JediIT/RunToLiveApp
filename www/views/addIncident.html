@@ -1,0 +1,30 @@
+﻿<div class="row ">
+    <a class=" col-xs-12 pull-right exit" href="#/"></a>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="photo" ng-click="takePhoto()">Take photo</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6">
+        <span></span>
+    </div>
+    <div class="col-xs-6">
+        <span></span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+        <select class="regions" ng-options="item.Number for item in transaction.Cards" ng-model="incident" ng-selected="true"></select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+        <div class="navbar-fixed-bottom">
+            <button ng-click="add();location.path('#/');" class="btn btn-primary mybtn">Add</button>
+        </div>
+    </div>
+</div>

@@ -3,13 +3,16 @@
     <name>RunToLive</name>
     <description>
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="support@phonegap.com" href="http://runtolive.info">
         RTL Team
     </author>
     <content src="index.html" />
-    <access origin="*" />
+  <access origin="*" />
+  <allow-navigation href="*" />
   <plugin name="de.appplant.cordova.plugin.local-notification" source="npm"/>
   <plugin name="phonegap-plugin-push" source="npm" />
   <plugin name="cordova-plugin-geolocation" source="npm" />
   <plugin name="cordova-plugin-whitelist" source="npm" />
+  <plugin name="de.appplant.cordova.plugin.local-notification" source="npm"/>
+  <plugin name="cordova-plugin-camera" source="npm"/>
 </widget>

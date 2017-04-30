@@ -1,11 +1,58 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>Blank App</title>
-    </head>
-    <body>
-        <script type="text/javascript" src="cordova.js"></script>
-    </body>
+﻿<!DOCTYPE html>
+<html ng-app="application" ng-controller="mainController">
+<head>
+    <title>Run To Live</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0" />
+
+
+    <link href="styles/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
+    <link href="styles/leaflet.css" rel="stylesheet">
+
+    <script src="libraries/angular.min.js"></script>
+    <script src="libraries/angular-touch.min.js"></script>
+    <script src="libraries/angular-route.min.js"></script>
+    <script src="libraries/leaflet.js"></script>
+    <script src="libraries/angular-leaflet-directive.min.js"></script>
+    <script src="./application.js"></script>
+    <script src="controllers/mainController.js"></script>
+    <script src="controllers/cardControllers.js"></script>
+    <script src="./services/requestService.js"></script>
+    <script src="./services/mapService.js"></script>
+    <script src="./services/cameraService.js"></script>
+    <script src="./configuration.js"></script>
+
+    <script src="./cordova.js"></script>
+</head>
+<body style="background: #1D1B1B;"ng-swipe-left="hideSideBar()" ng-swipe-right="showSideBar()" >
+
+
+    <!--====== Notification ======-->
+    <div class="notification" ng-show="info==true">
+        <h2>{{infoHeader}}</h2>
+        <p>{{location.path()}}</p>
+    </div>
+    <!--====== Preloader ======-->
+    <div class="p_prldr" ng-show="preloader==true">
+        <span class="svg_anm"></span>
+    </div>
+    <!--======= View ======-->
+
+    <ng-view id="view"></ng-view>
+   
+    <a class="add" href="#/addIncident"  ng-show="location.path()=='/'"></a>
+    <!-- ====== Offline Popup ====== -->
+
+    <div class="wrap pop-up ng-invalid" id="offline">
+        <div class="notification ">
+            <h3 class="block-title">{{getTranslate('index', 0)}}</h3>
+            <span class="message">{{getTranslate('index', 1)}}</span>
+        </div>
+    </div>
+</body>
 </html>
