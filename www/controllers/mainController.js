@@ -69,7 +69,8 @@ application.controller('mainController', [
                 lon: $scope.position.longitude,
                 radius: 500
             }).then(function (response) {
-                if (response.lenght != 0)
+                var c = response.lenght;
+                if (typeof c != typeof undefined)
                     cordova.plugins.notification.local.schedule({
                         id: 1,
                         title: "Attention",
@@ -78,7 +79,7 @@ application.controller('mainController', [
             }, function (response) {
 
             });
-        }, 30000);
+        }, 5000);
         $rootScope.takePhoto = function () {
             $camera.createPhoto();
         }
