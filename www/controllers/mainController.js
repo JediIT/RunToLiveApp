@@ -4,9 +4,9 @@ application.controller('mainController', [
         $rootScope.screenWidth = window.screen.width;
         $scope.position = {
             latitude: 46,
-            longitude:48
+            longitude: 48
         };
-   
+
         navigator.geolocation.getCurrentPosition(function (pos) {
             $scope.position.latitude = pos.coords.latitude;
             $scope.position.longitude = pos.coords.longitude;
@@ -69,15 +69,15 @@ application.controller('mainController', [
                 lon: $scope.position.longitude,
                 radius: 500
             }).then(function (response) {
-                var c = response.lenght;
-                if (typeof c != typeof undefined)
+                
+                if (response.data.length != 0 )
                     cordova.plugins.notification.local.schedule({
                         id: 1,
                         title: "Attention",
                         text: "Be careful!Save your life"
                     });
             }, function (response) {
-
+                console.log('error');
             });
         }, 5000);
         $rootScope.takePhoto = function () {
